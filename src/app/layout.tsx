@@ -37,16 +37,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="">
-      <body className="h-dvh overflow-y-hidden">
-        <div className="w-full border-[#F1F5F9] border-2">
+    <html lang="en">
+      <body className="h-screen overflow-hidden"> {/* Removed overflow-y-hidden */}
+        {/* Fixed Navbar */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#F1F5F9]">
           <Navbar />
         </div>
-        <div className="flex h-full ">
-            <Sidebar />
-          <main className="w-full">
-            {children}
-          </main>
+
+        {/* Sidebar + Main Content */}
+        <div className="flex h-full pt-[80px]"> {/* Add top padding equal to navbar height */}
+          <Sidebar />
+          <main className="w-full overflow-y-auto">{children}</main>
         </div>
       </body>
     </html>

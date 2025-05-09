@@ -3,21 +3,21 @@ import { useState } from "react";
 
 const Competitions = () => {
   const [competitions, setCompetitions] = useState([
-    { name: "Premier League", id: "000001" },
-    { name: "La Liga", id: "000002" },
-    { name: "Serie A", id: "000003" },
-    { name: "Bundesliga", id: "000004" },
-    { name: "Ligue 1", id: "000005" },
-    { name: "Eredivisie", id: "000006" },
-    { name: "Primeira Liga", id: "000007" },
-    { name: "Championship", id: "000008" },
-    { name: "MLS", id: "000009" },
-    { name: "J-League", id: "000010" },
-    { name: "K-League", id: "000011" },
-    { name: "Brasileirão", id: "000012" },
-    { name: "Argentine Primera", id: "000013" },
-    { name: "Scottish Premiership", id: "000014" },
-    { name: "A-League", id: "000015" },
+    { name: "Premier League 1", id: "000001" },
+    { name: "Premier League 2", id: "000002" },
+    { name: "Premier League 3", id: "000003" },
+    { name: "Premier League 4", id: "000004" },
+    { name: "Premier League 5", id: "000005" },
+    { name: "Premier League 6", id: "000006" },
+    { name: "Premier League 7", id: "000007" },
+    { name: "Premier League 8", id: "000008" },
+    { name: "Premier League 9", id: "000009" },
+    { name: "Premier League 10", id: "000010" },
+    { name: "Premier League 11", id: "000011" },
+    { name: "Premier League 12", id: "000012" },
+    { name: "Premier League 13", id: "000013" },
+    { name: "Premier League 14", id: "000014" },
+    { name: "Premier League 15", id: "000015" },
   ]);
   const [search, setSearch] = useState("");
   const [showForm, setShowForm] = useState(false);
@@ -53,7 +53,7 @@ const Competitions = () => {
   const paginatedItems = filtered.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="h-screen overflow-y-auto overflow-x-hidden p-8 pb-28">
+    <div className="p-8 pb-28">
       <div className="p-8">
         <div className="flex justify-between">
           {showForm ? (
@@ -138,10 +138,10 @@ const Competitions = () => {
                   className="flex w-[288px] justify-between mb-[30px] ml-[19px]"
                 >
                   <div className="">
-                    <span className="text-black">{comp.name}</span>
+                    <span className="text-black text-sm">{comp.name}</span>
                   </div>
                   <div className="">
-                    <span className="text-black">{comp.id}</span>
+                    <span className="text-black text-sm">{comp.id}</span>
                   </div>
                 </div>
               ))}

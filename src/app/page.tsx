@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Dashboard from "./dashboard/page";
 
 export default function Home() {
   return (
     <>
-      <h1>SpringChat</h1>
+      <Dashboard/>
     </>
   );
 }
